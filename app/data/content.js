@@ -11,13 +11,13 @@ export const contentData = {
     hero: {
       title: "WELCOME TO EKAANT-AGRO TOURISM RETREAT NEAR BOR TIGER RESERVE, MAHARASHTRA",
       subtitle: "Where silence heals, and nature whispers.....",
-      backgroundImage: "/placeholder.svg?height=800&width=1920",
+      backgroundImage: "/bg.jpg",
     },
     about: {
       title: "Ekaant (एकांत)",
       content:
         "meaning solitude in Sanskrit — was born from a simple yet powerful vision: to create a space where people could escape the chaos of everyday life and experience true peace in the lap of nature.Our retreat is designed around the principles of sustainable living, mindful travel, and authentic rural experiences. At Ekaant, you’ll find no loud music, no distractions — only nature’s rhythm, traditional hospitality, and the gentle hum of wildlife.Whether you’re a solo traveller looking for quiet, a couple seeking a soulful escape, or a family wanting to introduce your children to the joys of rural India — Ekaant welcomes you with open arms and a calm heart.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/about.png",
     },
     services: {
       title: "WHAT WE OFFER",
