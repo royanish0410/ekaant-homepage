@@ -17,10 +17,10 @@ Ekaant (एकांत), meaning "solitude" in Sanskrit, is a boutique agro-tou
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14
+- **Framework**: Next.js 15
 - **Styling**: Tailwind CSS
 - **Language**: JavaScript (JSX)
-- **Deployment**: Ready for Vercel/Netlify deployment
+- **Deployment**: Ready for Vercel deployment
 - **Icons**: Custom SVG icons and Lucide React
 - **Fonts**: Poppins font family
 
