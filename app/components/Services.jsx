@@ -28,7 +28,7 @@ export default function ServicesSection() {
                 backgroundRepeat: 'no-repeat',
             }}
             >
-            <h2 className="text-xl lg:text-2xl font-bold text-black uppercase tracking-wide">
+            <h2 className="text-xl lg:text-2xl font-bold text-[#003e17] uppercase tracking-wide">
                 {services.title}
             </h2>
         </div>

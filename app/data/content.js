@@ -14,10 +14,13 @@ export const contentData = {
       backgroundImage: "/bg.jpg",
     },
     about: {
-      title: "Ekaant (एकांत)",
-      content:
-        "meaning solitude in Sanskrit — was born from a simple yet powerful vision: to create a space where people could escape the chaos of everyday life and experience true peace in the lap of nature.Our retreat is designed around the principles of sustainable living, mindful travel, and authentic rural experiences. At Ekaant, you’ll find no loud music, no distractions — only nature’s rhythm, traditional hospitality, and the gentle hum of wildlife.Whether you’re a solo traveller looking for quiet, a couple seeking a soulful escape, or a family wanting to introduce your children to the joys of rural India — Ekaant welcomes you with open arms and a calm heart.",
+      title: "About Ekaant",
       image: "/about.png",
+      content: [
+        "Meaning Solitude In Sanskrit — Was Born From A Simple Yet Powerful Vision: To Create A Space Where People Could Escape The Chaos Of Everyday Life And Experience True Peace In The Lap Of Nature.",
+        "Our Retreat Is Designed Around The Principles Of Sustainable Living, Mindful Travel, And Authentic Rural Experiences. At Ekaant, You'll Find No Loud Music, No Distractions — Only Nature's Rhythm, Traditional Hospitality, And The Gentle Hum Of Wildlife.",
+        "Whether You're A Solo Traveller Looking For Quiet, A Couple Seeking A Soulful Escape, Or A Family Wanting To Introduce Your Children To The Joys Of Rural India — Ekaant Welcomes You With Open Arms And A Calm Heart."
+      ]
     },
     services: {
       title: "WHAT WE OFFER",
@@ -109,12 +112,12 @@ export const contentData = {
       },
     ],
     footer: {
-        leftText: "WE’D LOVE TO HELP YOU PLAN YOUR PEACEFUL ESCAPE.",
+        leftText: "WE’D LOVE TO HELP YOU \nPLAN YOUR PEACEFUL \nESCAPE.",
         contact: {
-          phone: "CALL/WHATSAPP: +91 9988776655",
-          email: "EMAIL: EKAANT@NEAVE.TECH",
-          instagram: "INSTAGRAM: EKAANT",
-          location: "LOCATION: NEAR BOR TIGER RESERVE, WARDHA, MAHARASHTRA"
+          phone: "+91 9988776655",
+          email: "EKAANT@NEAVE.TECH",
+          instagram: "EKAANT",
+          location: "NEAR BOR TIGER RESERVE, \nWARDHA, MAHARASHTRA"
         }
       }      
   }

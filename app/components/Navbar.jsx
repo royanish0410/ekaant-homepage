@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,13 @@ export default function Navbar() {
       {/* Spacer */}
       <div className="h-12 bg-transparent" />
 
-      {/* Navbar Wrapper */}
-      <div className="absolute top-12 left-0 w-full z-50">
+      {/* Animated Navbar Wrapper */}
+      <motion.div
+        className="absolute top-12 left-0 w-full z-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
         {/* Desktop Navbar */}
         <div className="hidden lg:flex justify-between bg-white shadow-lg h-28 px-[80px] max-w-[2400px] mx-auto items-center">
           {/* Left Side - Logo */}
@@ -37,8 +43,8 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Right Side - Nav Links (taking half width) */}
-          <nav className="flex justify-end items-center gap-10 xl:gap-16 pt-2">
+          {/* Right Side - Nav Links */}
+          <nav className="flex justify-end items-center gap-8 xl:gap-10 pt-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -111,7 +117,7 @@ export default function Navbar() {
             </nav>
           </div>
         )}
-      </div>
+      </motion.div>
     </>
   );
 }

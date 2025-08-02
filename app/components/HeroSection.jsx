@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import Navbar from "./Navbar";
 
 export default function HeroSection() {
@@ -18,21 +20,23 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-[2320px] px-4 sm:px-6 lg:px-8 text-center mx-auto mb-12">
-        <div className="pt-32 lg:pt-48">
-          {/* Single Heading with responsive text sizes */}
-          <h1
-            className="text-white font-bold uppercase leading-[110%] tracking-tight drop-shadow-2xl mb-2 mx-auto max-w-[90%] text-[32px] md:text-[45px] lg:text-[40px] xl:text-[40.65px]"
-          >
-            WELCOME TO EKAANT—AGRO TOURISM RETREAT <br className="hidden md:block"/> NEAR BOR TIGER RESERVE, MAHARASHTRA
+        <motion.div
+          className="pt-32 lg:pt-48"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          {/* Heading */}
+          <h1 className="text-white font-bold uppercase leading-[110%] tracking-tight drop-shadow-2xl mb-2 mx-auto max-w-[90%] text-[32px] md:text-[45px] lg:text-[40px] xl:text-[40.65px]">
+            WELCOME TO EKAANT—AGRO TOURISM RETREAT <br className="hidden md:block" /> NEAR BOR TIGER RESERVE, MAHARASHTRA
           </h1>
 
-          {/* Single Subtitle with responsive text sizes */}
+          {/* Subtitle */}
           <p className="text-white font-light drop-shadow-lg leading-relaxed text-xs md:text-md lg:text-lg xl:text-xl px-4 md:px-0">
             Where Silence Heals, And Nature Whispers.....
           </p>
-        </div>
+        </motion.div>
       </div>
-
     </section>
   );
 }
