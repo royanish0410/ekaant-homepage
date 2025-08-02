@@ -24,7 +24,7 @@ export default function FAQSection() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <h2 className="text-sm sm:text-base lg:text-xl font-bold text-[#003e17] uppercase tracking-widest">
+          <h2 className="text-xs sm:text-sm lg:text-xl font-bold text-[#003e17] uppercase tracking-widest">
             Frequently Asked Questions (FAQs)
           </h2>
         </div>
