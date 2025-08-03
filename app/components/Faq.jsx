@@ -14,17 +14,14 @@ export default function FAQSection() {
     <section className="w-full py-16 lg:py-24 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section Title with Background Image */}
+       {/* Section Title with Background Image */}
         <div
-          className="w-full h-[75px] flex items-center justify-center text-center mb-14"
+          className="w-full min-h-[80px] px-4 flex items-center justify-center text-center mb-14 bg-center bg-contain bg-no-repeat"
           style={{
             backgroundImage: "url('/whatweoffer.png')",
-            backgroundPosition: 'center center',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
           }}
         >
-          <h2 className="text-xs sm:text-sm lg:text-xl font-bold text-[#003e17] uppercase tracking-widest">
+          <h2 className="text-[10px] sm:text-sm lg:text-xl font-bold text-[#003e17] uppercase tracking-widest leading-tight">
             Frequently Asked Questions (FAQs)
           </h2>
         </div>
