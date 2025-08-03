@@ -6,22 +6,20 @@ import Navbar from './Navbar';
 export default function HeroSection() {
   return (
     <section className="relative flex items-end w-full h-screen overflow-hidden">
-      {/* Optimized background image */}
+      {/* Background image without blur */}
       <Image
         src="/bg.jpg"
         alt="Hero Background"
         fill
-        priority // Preload since it's the hero
+        priority
         quality={75}
-        placeholder="blur"
-        blurDataURL="/blur-bg.jpg" // Optional: Add small blurred image
         className="object-cover object-center z-0"
       />
 
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* Navbar (on top of background) */}
+      {/* Navbar */}
       <div className="absolute top-0 left-0 right-0 z-20">
         <Navbar />
       </div>
