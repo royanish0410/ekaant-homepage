@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { contentData } from '@/app/data/content';
 import Image from 'next/image';
 
@@ -50,9 +50,9 @@ export default function LocationSection() {
                   {method.details.map((detail, detailIndex) => (
                     <li 
                       key={detailIndex} 
-                      className="flex items-start space-x-3 text-[#003e17] text-base sm:text-lg lg:text-xl leading-tight"
+                      className="flex items-center gap-3 text-[#003e17] text-base sm:text-lg lg:text-xl leading-tight"
                     >
-                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-green-600 rounded-full flex-shrink-0 mt-0.5"></div>
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -66,7 +66,6 @@ export default function LocationSection() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
