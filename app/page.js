@@ -5,6 +5,7 @@ import ServicesSection from "./components/Services";
 import LocationSection from "./components/Location";
 import FAQSection from "./components/Faq";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <LocationSection />
       <FAQSection />
       <Footer />
+      <Analytics />
     </>
   );
 }
