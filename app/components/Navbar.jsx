@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar() {
       >
         {/* Desktop Navbar */}
         <div className="hidden lg:flex justify-between bg-white shadow-lg h-28 px-[80px] max-w-[2400px] mx-auto items-center">
-          {/* Left Side - Logo */}
+          {/* Logo */}
           <div className="flex items-center">
             <Image
               src="/logo.png"
@@ -43,7 +43,7 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Right Side - Nav Links */}
+          {/* Nav Links */}
           <nav className="flex justify-end items-center gap-8 xl:gap-10 pt-2">
             {navLinks.map((link) => (
               <Link
@@ -68,7 +68,7 @@ export default function Navbar() {
             className="object-contain"
           />
 
-          {/* Hamburger Icon */}
+          {/* Hamburger Button */}
           <button
             className="focus:outline-none cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
@@ -100,23 +100,32 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
-        {isOpen && (
-          <div className="lg:hidden bg-white shadow-md px-4 pb-4">
-            <nav className="flex flex-col gap-2 pt-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`${linkClasses} text-sm py-2 border-b border-gray-200`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
+        {/* Animated Mobile Dropdown */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              key="mobile-menu"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="lg:hidden bg-white shadow-md px-4 overflow-hidden"
+            >
+              <nav className="flex flex-col gap-2 pt-2 pb-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`${linkClasses} text-sm py-2 border-b border-gray-200`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </>
   );
